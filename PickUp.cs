@@ -53,6 +53,7 @@ public class PickUp : MonoBehaviour
         // If holding keeps the object following the hand position.
         if (holding && obj != null)
         {
+            //rb.MovePosition = obj.transform.position;
             rb.MovePosition(Vector3.Lerp(obj.transform.position, pos.position, vel * Time.deltaTime));
         }
 
